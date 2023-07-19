@@ -23,13 +23,13 @@ class Person{
     }
 
 }
-
+//sub class created
 class Students extends Person{
     constructor(firstName, lastName, age, grades,hobbies){
         super(firstName,lastName,age,hobbies)
         this.grades = grades;
     }
-
+    //method override
     getBio(){
         let status;
         if(this.grades >= 70 ){
@@ -40,7 +40,7 @@ class Students extends Person{
 
         return `${this.firstName} ${this.lastName} is ${status}.`
     }
-
+    //new method for sub class
     updateGrade(grade){
         this.grades += grade;
         return `${this.firstName} ${this.lastName} - Final Grade = ${this.grades}`;
