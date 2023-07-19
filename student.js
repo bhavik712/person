@@ -29,6 +29,10 @@ class Students extends Person{
         super(firstName,lastName,age,hobbies)
         this.grades = grades;
     }
+    //seeting get for full name
+    get fullName(){
+        return `${this.firstName} ${this.lastName}`
+    }
     //method override
     getBio(){
         let status;
@@ -38,7 +42,7 @@ class Students extends Person{
             status = 'Failed';
         }
 
-        return `${this.firstName} ${this.lastName} is ${status}.`
+        return `${this.fullName} is ${status}.`
     }
     //new method for sub class
     updateGrade(grade){
